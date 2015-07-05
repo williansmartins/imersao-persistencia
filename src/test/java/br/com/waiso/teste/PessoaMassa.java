@@ -6,7 +6,7 @@ public class PessoaMassa {
 	
 	PessoaEntity popularPessoa(){
 		PessoaEntity pessoa = new PessoaEntity();
-		pessoa.setNome("Willians Martins");
+		pessoa.setNome("Renato");
 		pessoa.setIdade(32);
 		pessoa.setSexo('M');
 		return pessoa;

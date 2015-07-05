@@ -23,7 +23,6 @@ public class JpaGenericDao<T extends Serializable> implements Dao<T>{
 		entityManager = getEntityManager();
 	}
 	
-    @Override
 	public void insert(T entity) {
 		entityManager = getEntityManager();
 		try{
@@ -38,7 +37,6 @@ public class JpaGenericDao<T extends Serializable> implements Dao<T>{
 		}
 	}
 	
-	@Override
 	public List<T> findAll() {
 		entityManager = getEntityManager();		
 		CriteriaQuery criteriaQuery = entityManager.getCriteriaBuilder().createQuery(getGenericClass());
@@ -47,7 +45,6 @@ public class JpaGenericDao<T extends Serializable> implements Dao<T>{
 		entityManager.close();
 		return lista;
 	}
-	@Override
 	
 	public List<T> findEspecific(Integer id) {
 		entityManager = getEntityManager();	
@@ -67,7 +64,6 @@ public class JpaGenericDao<T extends Serializable> implements Dao<T>{
 		}
 	}
 	
-	@Override
 	public void delete(Integer primaryKey) {
 		entityManager = getEntityManager();
 		try{
@@ -83,7 +79,6 @@ public class JpaGenericDao<T extends Serializable> implements Dao<T>{
 	    }
 	}
 
-	@Override
 	public T findById(Integer primaryKey) {
 		entityManager = getEntityManager();
 		T entity = null;
@@ -98,7 +93,6 @@ public class JpaGenericDao<T extends Serializable> implements Dao<T>{
 		}
 	}
 
-	@Override
     public void update(T entity) {
 		entityManager = getEntityManager();
 		try {
@@ -146,7 +140,6 @@ public class JpaGenericDao<T extends Serializable> implements Dao<T>{
 		}
 	}
 
-	@Override
 	public void insertAll(List<T> entities) {
 		for (T t : entities) {
 			insert(t);

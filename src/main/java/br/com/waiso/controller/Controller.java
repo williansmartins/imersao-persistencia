@@ -13,8 +13,6 @@ import br.com.waiso.dao.especific.PessoaDAOImpl;
 import br.com.waiso.dao.generic.JpaGenericDao;
 import br.com.waiso.entity.PessoaEntity;
 
-import com.google.gson.Gson;
-
 @WebServlet("/Controller")
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -37,7 +35,7 @@ public class Controller extends HttpServlet {
 		//devolver para o front a resposta de sucesso
 		response.setContentType("application/json");
 		PrintWriter out = response.getWriter();
-		out.print("Sucesso ao inserir a pessoa: " + new Gson().toJson(pessoa));
+//		out.print("Sucesso ao inserir a pessoa: " + new Gson().toJson(pessoa));
 		out.flush();
 	}
 
